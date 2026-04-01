@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('imagens/fundo.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* 👈 AQUI */
+    min-height: 100vh;
+    background-image: url('imagens/fundo.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    background-color: white;
+    width: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    }
+.card-header {
+    background-color: #1a4bcc;
+    padding: 18px; /* 👈 diminui */
+    text-align: center;
+}
+.card-header {
+    background-color: #1a4bcc;
+    padding: 28px;
+    text-align: center;
+}
+.card-header img {
+    width: 220px;
+}
+.card-body {
+    padding: 32px;
+}
+.titulo {
+    font-size: 1.4rem;
+    color: #111;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.subtitulo {
+    font-size: 0.9rem;
+    color: #666666;
+    text-align: center;
+    margin-bottom: 24px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+input:focus {
+    outline: none;
+    border-color: #1a4bcc;
+}
+button {
+    padding: 12px;
+    background-color: #1a4bcc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #163ea8;
+}
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #999;
+}
+.social {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #3367d8;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+.social:hover {
+    background-color: #1956da; /* leve azulzinho */
+    border-color: #1a4bcc;
+    transform: translateY(-2px); /* sobe levemente */
+    box-shadow: 0 4px 10px rgba(160, 135, 135, 0.08);
+}
