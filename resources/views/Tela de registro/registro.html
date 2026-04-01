@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!--serve para avisar o navegador que HTML é o tipo do arquivo-->
+<html lang="pt-br">
+    <head> <!--tipo a parte do .h em um TAD em C-->
+        <meta charset="UTF-8"/>
+        <title> PreparaElite - Cadastro </title> <!--nome que aparece na aba do navegador--> 
+        <style>
+            body{
+                margin: 0; /* remove a borda branda que o navegador coloca*/
+                min-height: 100vh; /*faz a pagina ocupar 100% da altura da tela*/
+                background-image: url('imagens/fundo.png');
+                background-size: cover; /* a imagem estica para cobrir a tela toda*/
+                background-position: center; /* centraliza a imagem*/
+                display: flex; /*essa, mais as proximas 2 linhas, no body centralizam qualquer coisa na tela, horizontal e verticalmente*/
+                align-items: center;
+                justify-content: center;
+            }
+            .card{ /*o ponto indica que card é uma classe, um apelido que eu dou para uma div para estilizar ele no CSS*/
+                background-color: white;
+                width: 450px;
+                border-radius: 16px; /*arredonda os cantos do card*/
+                overflow: hidden; /* garante que o header azul respeite o arreodndamento do card*/
+            }
+            .card-header{
+                background-color: #1a4bcc;
+                padding: 28px;
+                text-align: center;
+            }
+            .card-header img{
+                width: 220px;
+            }
+            .card-body{
+                padding:32px;
+            }
+            .titulo{
+               font-size: 1.4rem;
+               color: #111111;
+               text-align: center;
+               margin-bottom: 4px;
+            }
+            .subtitulo{
+                font-size: 0.9rem;
+                color: 666666;
+                text-align: center;
+                margin-bottom: 24px;
+            }
+        </style>
+    </head>
+    <body> <!--efetivamente, oq aparece no site-->
+        <div class = "card">
+            <div class = "card-header">
+                <img src = "imagens/logo.png" alt="PreparaElite Concursos"/>
+            </div>
+            <div class = "card-body">
+                <div class = "card-body">
+                    <h1 class = "titulo">Crie sua conta</h1>
+                    <p class = "subtitulo">Preencha os dados abaixo para se cadastrar.</p>
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
