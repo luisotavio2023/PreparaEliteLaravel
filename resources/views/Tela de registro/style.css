@@ -16,7 +16,7 @@ body {
     overflow: hidden;
     }
 .card-header {
-    background: linear-gradient(90deg, #16378b, #1a4bcc);
+    background: linear-gradient(90deg, #16378b, #1a4bcc); /* degrade do parte da logo*/
     padding: 0;
     text-align: center;
     height: 120px; 
@@ -95,4 +95,7 @@ button:hover {
     border-color: #1a4bcc;
     transform: translateY(-2px); /* sobe levemente */
     box-shadow: 0 4px 10px rgba(160, 135, 135, 0.08);
+}
+.mb{
+    margin-bottom: 10px;
 }
