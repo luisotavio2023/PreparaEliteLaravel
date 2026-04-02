@@ -1,15 +1,5 @@
 body {
     margin: 0;
-    min-height: 100vh;
-    background-image: url('imagens/fundo.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-body {
-    margin: 0;
     font-family: 'Poppins', sans-serif; /* 👈 AQUI */
     min-height: 100vh;
     background-image: url('imagens/fundo.png');
@@ -21,25 +11,28 @@ body {
 }
 .card {
     background-color: white;
-    width: 450px;
+    width: 360px;
     border-radius: 16px;
     overflow: hidden;
     }
 .card-header {
-    background-color: #1a4bcc;
-    padding: 18px; /* 👈 diminui */
+    background: linear-gradient(90deg, #16378b, #1a4bcc);
+    padding: 0;
     text-align: center;
-}
-.card-header {
-    background-color: #1a4bcc;
-    padding: 28px;
-    text-align: center;
+    height: 120px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .card-header img {
-    width: 220px;
+    width: 200px; 
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    margin-top: 20px;
 }
 .card-body {
-    padding: 32px;
+    padding: 20px 24px;
 }
 .titulo {
     font-size: 1.4rem;
