@@ -6,14 +6,18 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 48px 0;
+    box-sizing: border-box;
 }
 .card {
     background-color: white;
     width: 360px;
     border-radius: 16px;
     overflow: hidden;
+    /*margin-top: 40px;*/
     }
 .card-header {
     background: linear-gradient(90deg, #16378b, #1a4bcc); /* degrade do parte da logo*/
@@ -98,4 +102,30 @@ button:hover {
 }
 .mb{
     margin-bottom: 10px;
+}
+footer{
+    width: 100%;
+    background-color: rgba(5, 12, 40, 0.85);
+    padding: 24px 48px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+.footer-col h4{
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.footer-col p, .footer-col a{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.78rem;
+    line-height: 1.8;
+    text-decoration: none;
+    display: block;
+}
+.footer-col a:hover{
+    color: white;
 }
