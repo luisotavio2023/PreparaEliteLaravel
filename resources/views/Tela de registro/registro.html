@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- ÍCONES -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- FONTE AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <div class="card">
@@ -19,9 +22,18 @@
             <h1 class="titulo">Crie sua conta</h1>
             <p class="subtitulo">Preencha os dados abaixo</p>
             <form>
-                <input type="text" placeholder="Nome completo">
-                <input type="email" placeholder="E-mail">
-                <input type="password" placeholder="Senha">
+                <div class="input-group">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" placeholder="Nome completo">
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" placeholder="E-mail">
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" placeholder="Senha">
+                </div>
                 <button type="submit" class="btn">Criar conta</button>
             </form>
             <div class="divider">ou</div>
@@ -37,8 +49,10 @@
     </div>
     <footer>
         <div class="footer-col">
-            <h4>Sobre nós</h4>
-            <p>PreparaElite Concursos – A plataforma mais completa para sua preparação em concursos públicos.</p>
+            <div class="footer-col">
+                <h4>Sobre nós</h4>
+                <p>A plataforma mais completa para sua preparação em concursos públicos.</p>
+            </div>
         </div>
         <div class="footer-col">
             <h4>Links</h4>
