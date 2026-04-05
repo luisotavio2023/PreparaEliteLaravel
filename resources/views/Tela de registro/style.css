@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif; /* 👈 AQUI */
+    font-family: 'Poppins', sans-serif; 
     min-height: 100vh;
     background-image: url('imagens/fundo.png');
     background-size: cover;
@@ -18,10 +18,9 @@ body {
     border-radius: 16px;
     overflow: hidden;
     margin: 0 auto 40px auto;
-    /*margin-top: 40px;*/
     }
 .card-header {
-    background: linear-gradient(90deg, #16378b, #1a4bcc); /* degrade do parte da logo*/
+    background: linear-gradient(90deg, #16378b, #1a4bcc); 
     padding: 0;
     text-align: center;
     height: 120px; 
@@ -119,24 +118,24 @@ button:hover {
     transition: all 0.2s ease;
 }
 .social:hover {
-    background-color: #1956da; /* leve azulzinho */
+    background-color: #1956da; 
     border-color: #1a4bcc;
-    transform: translateY(-2px); /* sobe levemente */
+    transform: translateY(-2px); 
     box-shadow: 0 4px 10px rgba(160, 135, 135, 0.08);
 }
 .mb{
     margin-bottom: 10px;
 }
-footer{
+footer {
     width: 100%;
     background-color: rgba(5, 12, 40, 0.85);
-    padding: 24px 48px;
+    padding: 24px 200px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr; 
     gap: 24px;
     margin-top: auto;
     box-sizing: border-box;
-
+    text-align: left; 
 }
 .footer-col h4{
     color: white;
