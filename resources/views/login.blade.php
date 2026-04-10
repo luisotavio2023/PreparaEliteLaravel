@@ -1,97 +1,95 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PreparaÊlite - Login</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-</head>
-<body class="min-vh-100 d-flex align-items-center justify-content-center py-5" style="background-image: url('{{ asset('public/img/livrosprateleira.jpg') }}')">
-    <div class="container">
-        <div class="row shadow-lg rounded-3 overflow-hidden" style="background-color: #002D5B;">
-            <!-- Brand Section -->
-            <div class="col-md-6 bg-white p-5 d-flex flex-column justify-content-center" style="background-color: #002D5B;">
-                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 120px; height: 120px; background-color: #002D5B;">
-                    <span class="text-white fw-bold fs-2">PE</span>
-                </div>
-                <h1 class="text-center fw-bold my-4 text-primary">PREPARAELITE</h1>
-                <p class="text-center fs-5 text-muted">Cursos preparatórios para concursos públicos com valores acessíveis para todos.</p>
+@extends('layouts.app')
+
+@section('title', 'Login')
+
+@section('content')
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card border-0 shadow-lg overflow-hidden">
+            <div class="card-header bg-primary text-white text-center py-4">
+                <img src="{{ asset('images/BrasaoPreparaSF.png') }}" alt="PreparaElite" class="img-fluid mb-3" style="max-width: 180px;">
+                <h2 class="mb-0">Bem-vindo de volta!</h2>
+                <p class="mb-0">Acesse sua conta para continuar seus estudos</p>
             </div>
             
-            <!-- Login Section -->
-            <div class="col-md-6 bg-white p-5">
-                <h2 class="fw-semibold mb-2 text-primary">Seja bem-vindo</h2>
-                <p class="text-muted mb-4">Efetue seu login para acessar sua conta</p>
-                
-                <form>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email ou usuário</label>
-                        <input type="text" class="form-control form-control-lg" id="email" placeholder="Seu email ou nome de usuário" required>
+            <div class="card-body p-4 p-md-5">
+                @if($errors->any())
+                    <div class="alert alert-danger d-flex align-items-center">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        @foreach($errors->all() as $error)
+                            {{ $error }}
+                        @endforeach
                     </div>
+                @endif
+
+                @if(session('error'))
+                    <div class="alert alert-danger d-flex align-items-center">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        {{ session('error') }}
+                    </div>
+                @endif
+                
+                <form method="POST" action="">
+                    @csrf
                     
                     <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-envelope text-muted"></i></span>
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" 
+                                   id="email" name="email" value="{{ old('email') }}" 
+                                   placeholder="seu@email.com" required autofocus>
+                        </div>
+                        @error('email')
+                            <div class="invalid-feedback d-block">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    
+                    <div class="mb-4">
                         <label for="password" class="form-label">Senha</label>
                         <div class="input-group">
-                            <input type="password" class="form-control form-control-lg" id="password" placeholder="Sua senha" required>
-                            <span class="input-group-text password-toggle" onclick="togglePassword()">
-                                <i class="bi bi-eye"></i>
-                            </span>
+                            <span class="input-group-text bg-light"><i class="fas fa-lock text-muted"></i></span>
+                            <input type="password" class="form-control @error('password') is-invalid @enderror" 
+                                   id="password" name="password" placeholder="Sua senha" required>
                         </div>
-                        <div class="d-flex justify-content-end mt-2">
-                            <a href="#" class="text-decoration-none text-primary">Esqueci a senha</a>
+                        @error('password')
+                            <div class="invalid-feedback d-block">{{ $message }}</div>
+                        @enderror
+                        <div class="text-end mt-2">
+                            <a href="" class="text-decoration-none">Esqueceu a senha?</a>
                         </div>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary btn-lg w-100 mt-3">Entrar</button>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                        <label class="form-check-label" for="remember">Lembrar-me</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100 py-3 mb-3 fw-bold">
+                        <i class="fas fa-sign-in-alt me-2"></i> Entrar
+                    </button>
+                    
+                    <div class="d-flex align-items-center my-4">
+                        <hr class="flex-grow-1">
+                        <span class="mx-3 text-muted">ou</span>
+                        <hr class="flex-grow-1">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button type="button" class="btn btn-outline-primary w-100 mb-2">
+                            <i class="fab fa-google me-2"></i> Continuar com Google
+                        </button>
+                        <button type="button" class="btn btn-outline-dark w-100">
+                            <i class="fab fa-apple me-2"></i> Continuar com Apple
+                        </button>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="mb-0">Não tem uma conta? <a href="{{ route('register') }}" class="text-decoration-none fw-bold">Cadastre-se</a></p>
+                    </div>
                 </form>
-                
-                <div class="d-flex align-items-center my-4">
-                    <hr class="flex-grow-1">
-                    <span class="px-3 text-muted">ou</span>
-                    <hr class="flex-grow-1">
-                </div>
-                
-                <div class="d-grid gap-2">
-                    <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center py-2">
-                        <i class="bi bi-google me-2"></i> Entrar com Google
-                    </button>
-                    <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center py-2">
-                        <i class="bi bi-microsoft me-2"></i> Entrar com Microsoft
-                    </button>
-                </div>
-                
-                <div class="text-center mt-4">
-                    <p class="text-muted">Não tem uma conta? <a href="#" class="text-primary text-decoration-none fw-medium">Cadastre-se</a></p>
-                </div>
-                
-                <div class="text-center mt-4 pt-3 border-top">
-                    <small class="text-muted">© PreparaÊlite 2025. Todos os direitos reservados.</small>
-                </div>
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script>
-        function togglePassword() {
-            const passwordInput = document.getElementById('password');
-            const toggleIcon = document.querySelector('.password-toggle i');
-            
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                toggleIcon.classList.remove('bi-eye');
-                toggleIcon.classList.add('bi-eye-slash');
-            } else {
-                passwordInput.type = 'password';
-                toggleIcon.classList.remove('bi-eye-slash');
-                toggleIcon.classList.add('bi-eye');
-            }
-        }
-    </script>
-</body>
-</html>
+</div>
+@endsection
