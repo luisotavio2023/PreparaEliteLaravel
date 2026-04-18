@@ -18,7 +18,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             min-height: 100vh;
-            background-image: url('imagens/fundo.png');
+            background-image: url('{{ asset("assets/images/imagem-fundo.jpeg") }}');
             background-size: cover;
             background-position: center;
             padding-top: 48px;
@@ -175,7 +175,7 @@
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="custom-card">
                     <div class="custom-card-header">
-                        <img src="imagens/logo.png" alt="Logo" class="img-fluid">
+                        <img src="{{ asset('assets/images/Logo.png') }}" alt="Logo" class="img-fluid">
                     </div>
                     <div class="custom-card-body">
                         <h1 class="titulo">Crie sua conta</h1>

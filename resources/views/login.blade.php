@@ -105,6 +105,14 @@
         .footer-link:hover {
             color: white;
         }
+
+                .social-icon {
+            font-size: 1.1rem;
+        }
+        
+        .login-icon {
+            font-size: 1rem;
+        }
     </style>
 
     <main class="d-flex flex-column min-vh-100">
@@ -129,14 +137,14 @@
                         </div>
                         
                         <div class="mb-2">
-<input type="password" name="password" class="form-control" placeholder="Senha" required>
+                            <input type="password" name="password" class="form-control" placeholder="Senha" required>
                         </div>
 
                         <div class="text-end mb-4">
                             <a href="#" class="text-decoration-none small text-primary">Esqueci a minha senha</a>
                         </div>
 
-                        <button type="submit" class="btn btn-primary-elite w-100 rounded-3 mb-3">
+                        <button type="submit" class="btn btn-primary-elite w-100 rounded-3 mb-3 login-icon">
                             Entrar
                         </button>
 
