@@ -10,6 +10,10 @@ Route::get('registro', function () {
     return view('registro');
 });
 
+Route::get('poslogin', function () {
+    return view('poslogin');
+});
+
 
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
