@@ -1,4 +1,6 @@
 <x-layout-guest pageTitle="Login">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         /* 1. FUNDO E LAYOUT GERAL */
         body {
@@ -169,31 +171,33 @@
             </div>
         </div>
 
-        <footer class="text-white py-5">
-            <div class="container">
-                <div class="row text-start opacity-75">
-                    <div class="col-md-4 mb-4">
-                        <h6 class="fw-bold text-white mb-3">Sobre nós</h6>
-                        <p class="small">PreparaElite Concursos - A plataforma mais completa para sua preparação em concursos públicos.</p>
-                    </div>
-                    <div class="col-6 col-md-4 mb-4">
-                        <h6 class="fw-bold text-white mb-3">Links</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="footer-link">Termos de uso</a></li>
-                            <li><a href="#" class="footer-link">Política de privacidade</a></li>
-                            <li><a href="#" class="footer-link">Contato</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-md-4 mb-4">
-                        <h6 class="fw-bold text-white mb-3">Redes sociais</h6>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="footer-link">Instagram</a></li>
-                            <li><a href="#" class="footer-link">Facebook</a></li>
-                            <li><a href="#" class="footer-link">YouTube</a></li>
-                        </ul>
+           <footer class="bg-dark text-white py-5 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-uppercase mb-3">Sobre nós</h6>
+                    <p class="small text-secondary mb-0">PreparaElite Concursos - Transformando sua dedicação em aprovação real.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-uppercase mb-3">Links</h6>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-1">Termos de uso</li>
+                        <li class="mb-1">Política de privacidade</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h6 class="fw-bold text-uppercase mb-3">Redes sociais</h6>
+                    <div class="d-flex justify-content-md-end gap-3 fs-5">
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-youtube"></i>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </main>
+    <script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </script>
 </x-layout-guest>

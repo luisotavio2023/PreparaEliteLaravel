@@ -69,6 +69,54 @@
             opacity: 0.9;
         }
 
+        /* Ícones sociais - Versão compacta */
+        .social-icon {
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-2px);
+            background-color: var(--amarelo-elite);
+        }
+
+        .social-icon:hover i {
+            color: var(--azul-deep) !important;
+        }
+
+        .social-icon i {
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Links do footer compacto */
+        .footer-link {
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .footer-link:hover {
+            color: var(--amarelo-elite) !important;
+        }
+
+        /* Botão hero */
+        .btn-warning {
+            transition: all 0.3s ease;
+        }
+
+        .btn-warning:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
         /* Ajuste fino para os cards flutuantes */
         .info-card {
             border: none;
@@ -186,29 +234,82 @@
         </div>
     </section>
 
-    <!-- RODAPÉ (Padrão Login) -->
+        <!-- RODAPÉ COM ÍCONES CORRETAMENTE ALINHADOS -->
     <footer class="bg-dark text-white py-5 mt-auto">
-        <div class="container text-center text-md-start">
+        <div class="container">
             <div class="row gy-4">
-                <div class="col-md-4">
+                <!-- Coluna 1 - Sobre -->
+                <div class="col-md-4 text-center text-md-start">
                     <h6 class="fw-bold text-uppercase mb-3">Sobre nós</h6>
                     <p class="small text-secondary mb-0">PreparaElite Concursos - Transformando sua dedicação em aprovação real.</p>
                 </div>
-                <div class="col-md-4">
+                
+                <!-- Coluna 2 - Links -->
+                <div class="col-md-4 text-center text-md-start">
                     <h6 class="fw-bold text-uppercase mb-3">Links</h6>
-                    <ul class="list-unstyled small text-secondary">
-                        <li class="mb-1">Termos de uso</li>
-                        <li class="mb-1">Política de privacidade</li>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary footer-link">Termos de uso</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary footer-link">Política de privacidade</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-secondary footer-link">Contato</a>
+                        </li>
                     </ul>
                 </div>
-                <div class="col-md-4 text-md-end">
-                    <h6 class="fw-bold text-uppercase mb-3">Redes sociais</h6>
-                    <div class="d-flex justify-content-md-end gap-3 fs-5">
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-facebook"></i>
-                        <i class="bi bi-youtube"></i>
+                
+                <!-- Coluna 3 - Redes Sociais (CORRIGIDO O ALINHAMENTO) -->
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-uppercase mb-3 text-center text-md-start">Redes sociais</h6>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/preparaeliteconcursos/" 
+                           class="social-icon" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Instagram">
+                            <i class="bi bi-instagram text-white"></i>
+                        </a>
+                        
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/preparaeliteconcursos" 
+                           class="social-icon" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Facebook">
+                            <i class="bi bi-facebook text-white"></i>
+                        </a>
+                        
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@preparaeliteconcursos" 
+                           class="social-icon" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="YouTube">
+                            <i class="bi bi-youtube text-white"></i>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/company/preparaeliteconcursos" 
+                           class="social-icon" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="LinkedIn">
+                            <i class="bi bi-linkedin text-white"></i>
+                        </a>
                     </div>
+                    <p class="small text-secondary mt-3 mb-0 text-center text-md-start">
+                        Siga-nos nas redes sociais
+                    </p>
                 </div>
+            </div>
+            
+            <!-- Linha de copyright -->
+            <hr class="bg-secondary my-4">
+            <div class="text-center small text-secondary">
+                &copy; 2025 PreparaElite Concursos. Todos os direitos reservados.
             </div>
         </div>
     </footer>
