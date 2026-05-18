@@ -233,6 +233,69 @@
             </div>
         </div>
     </section>
+    </section>
+
+    <!-- CURSOS EM DESTAQUE -->
+    <section class="container my-5">
+        <h2 class="fw-bold text-center mb-4">Cursos em Destaque</h2>
+        <div class="row row-cols-2 row-cols-md-3 g-4">
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://preview.redd.it/special-operations-of-the-s%C3%A3o-paulo-military-police-gate-v0-lo8kxfd63n871.jpg?width=640&crop=smart&auto=webp&s=ae66ee1b86c4c62c025eefaef3b6a5c3775bc8b2" class="card-img-top" alt="PMESP">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="fw-bold mb-0">PMESP</h6>
+                        <small class="text-primary fw-semibold">Soldado</small>
+                        <p class="small text-muted mt-2">Prepare-se para a Polícia Militar do Estado de São Paulo.</p>
+                        <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjFAhbpHCxH1Cd2i42YVHKp_0MLEe07vAufA&s" alt="PC SP">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="fw-bold mb-0">PC SP</h6>
+                        <small class="text-primary fw-semibold">Soldado</small>
+                        <p class="small text-muted mt-2">Conteúdo atualizado para Carreiras Policias Civis.</p>
+                        <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://portal.estrategia.com/wp-content/uploads/2024/09/o-que-e-prf-profissional-da-prf-em-uma-das-principais-rodovias-do-brasil.jpg" class="card-img-top" alt="PRF">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="fw-bold mb-0">PRF</h6>
+                        <small class="text-primary fw-semibold">Escrivão/Investigador</small>
+                        <p class="small text-muted mt-2">Prepare-se para uma das carreiras mais disputadas.</p>
+                        <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://omentorconcursos.com.br/wp-content/uploads/2023/07/PF-ou-PRF.webp" class="card-img-top" alt="PF">
+                    <div class="card-body d-flex flex-column">
+                        <h6 class="fw-bold mb-0">PF</h6>
+                        <small class="text-primary fw-semibold">Policial Rodoviário Federal</small>
+                        <p class="small text-muted mt-2">Conteúdo completo para Polícia Federal.</p>
+                        <a href="#" class="btn btn-primary w-100 mt-auto">Ver Curso</a>
+                    </div>
+                </div>
+            </div>
+
+
+            
+
+        </div>
+
+    </section>
+
 
         <!-- RODAPÉ COM ÍCONES CORRETAMENTE ALINHADOS -->
     <footer class="bg-dark text-white py-5 mt-auto">
